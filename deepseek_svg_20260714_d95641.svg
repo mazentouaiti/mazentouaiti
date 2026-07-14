@@ -164,7 +164,7 @@
     </circle>
 
     <!-- Profile Image (rounded) -->
-    <image href="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/mazen.jpeg" x="150" y="170" width="180" height="180" rx="90" clip-path="inset(0 round 90)"/>
+    <image href="https://github.com/mazentouaiti/mazentouaiti/blob/main/mazen.jpeg" x="150" y="170" width="180" height="180" rx="90" clip-path="inset(0 round 90)"/>
 
     <!-- Image border glow -->
     <circle cx="240" cy="260" r="90" fill="none" stroke="rgba(124,58,237,0.4)" stroke-width="2">
