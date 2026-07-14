@@ -159,102 +159,132 @@
         </rect>
       </g>
 
-      <!-- Info items - sequential reveal -->
+      <!-- Info items - sequential reveal - Spread across full width -->
       <g font-family="'SF Pro Display','Segoe UI',system-ui" font-size="17" fill="#94A3B8">
-        <!-- Location -->
+        <!-- Row 1: Location & Education -->
         <text x="60" y="265" opacity="0">
           <tspan fill="#94A3B8">📍 </tspan>Tunis, Tunisia
           <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
         </text>
-        <!-- Education -->
-        <text x="60" y="305" opacity="0">
+        <text x="380" y="265" opacity="0">
           <tspan fill="#94A3B8">🎓 </tspan>Embedded Systems Eng. @ ESPRIT
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.0s" fill="freeze"/>
+        </text>
+
+        <!-- Row 2: Focus & Portfolio -->
+        <text x="60" y="305" opacity="0">
+          <tspan fill="#94A3B8">⚡ </tspan>prplOS/OpenWrt · Broadband Software
           <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.5s" fill="freeze"/>
         </text>
-        <!-- Current Focus -->
-        <text x="60" y="345" opacity="0">
-          <tspan fill="#94A3B8">⚡ </tspan>prplOS/OpenWrt · Broadband Software
-          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.5s" fill="freeze"/>
-        </text>
-        <!-- Portfolio -->
-        <text x="60" y="385" opacity="0">
+        <text x="500" y="305" opacity="0">
           <tspan fill="#94A3B8">🖥️ </tspan>mazen-touaiti.lovable.app
-          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.5s" fill="freeze"/>
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.0s" fill="freeze"/>
         </text>
-        <!-- Email -->
-        <text x="60" y="425" opacity="0">
+
+        <!-- Row 3: Email -->
+        <text x="60" y="345" opacity="0">
           <tspan fill="#94A3B8">✉️ </tspan>touaitimazen@gmail.com
-          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.5s" fill="freeze"/>
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.5s" fill="freeze"/>
         </text>
       </g>
 
-      <!-- Skills section -->
+      <!-- Skills section - Full width -->
       <g>
-        <text x="60" y="485" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#64748B" letter-spacing="2" text-transform="uppercase" opacity="0">
+        <text x="60" y="420" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#64748B" letter-spacing="2" text-transform="uppercase" opacity="0">
           ⚡ Core Skills
-          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="6.5s" fill="freeze"/>
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.5s" fill="freeze"/>
         </text>
 
-        <!-- Skill pills -->
+        <!-- Skill pills - Full width spread -->
         <g opacity="0">
-          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="7s" fill="freeze"/>
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5s" fill="freeze"/>
 
-          <!-- Row 1 -->
+          <!-- Row 1 - Spread across full width -->
           <g>
-            <rect x="60" y="510" width="110" height="34" rx="17" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.3)" stroke-width="1">
+            <rect x="60" y="445" width="110" height="34" rx="17" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.3)" stroke-width="1">
               <animate attributeName="width" values="110;115;110" dur="2s" repeatCount="indefinite"/>
             </rect>
-            <text x="115" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Embedded C</text>
+            <text x="115" y="467" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Embedded C</text>
           </g>
           <g>
-            <rect x="180" y="510" width="100" height="34" rx="17" fill="rgba(34,211,238,0.15)" stroke="rgba(34,211,238,0.3)" stroke-width="1">
+            <rect x="190" y="445" width="100" height="34" rx="17" fill="rgba(34,211,238,0.15)" stroke="rgba(34,211,238,0.3)" stroke-width="1">
               <animate attributeName="width" values="100;105;100" dur="2.2s" repeatCount="indefinite"/>
             </rect>
-            <text x="230" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">STM32</text>
+            <text x="240" y="467" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">STM32</text>
           </g>
           <g>
-            <rect x="290" y="510" width="95" height="34" rx="17" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.3)" stroke-width="1">
+            <rect x="310" y="445" width="95" height="34" rx="17" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.3)" stroke-width="1">
               <animate attributeName="width" values="95;100;95" dur="1.8s" repeatCount="indefinite"/>
             </rect>
-            <text x="337" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">Linux</text>
+            <text x="357" y="467" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">Linux</text>
           </g>
           <g>
-            <rect x="395" y="510" width="100" height="34" rx="17" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.3)" stroke-width="1">
+            <rect x="425" y="445" width="100" height="34" rx="17" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.3)" stroke-width="1">
               <animate attributeName="width" values="100;105;100" dur="2.4s" repeatCount="indefinite"/>
             </rect>
-            <text x="445" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">OpenWrt</text>
+            <text x="475" y="467" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">OpenWrt</text>
           </g>
-
-          <!-- Row 2 -->
           <g>
-            <rect x="60" y="552" width="90" height="34" rx="17" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.25)" stroke-width="1">
+            <rect x="545" y="445" width="90" height="34" rx="17" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.3)" stroke-width="1">
               <animate attributeName="width" values="90;95;90" dur="2.1s" repeatCount="indefinite"/>
             </rect>
-            <text x="105" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Python</text>
+            <text x="590" y="467" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Python</text>
           </g>
           <g>
-            <rect x="160" y="552" width="95" height="34" rx="17" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.25)" stroke-width="1">
+            <rect x="655" y="445" width="95" height="34" rx="17" fill="rgba(34,211,238,0.15)" stroke="rgba(34,211,238,0.3)" stroke-width="1">
               <animate attributeName="width" values="95;100;95" dur="1.9s" repeatCount="indefinite"/>
             </rect>
-            <text x="207" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">Yocto</text>
+            <text x="702" y="467" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">Yocto</text>
           </g>
+
+          <!-- Row 2 - Spread across full width -->
           <g>
-            <rect x="265" y="552" width="85" height="34" rx="17" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1">
+            <rect x="60" y="492" width="85" height="34" rx="17" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1">
               <animate attributeName="width" values="85;90;85" dur="2.3s" repeatCount="indefinite"/>
             </rect>
-            <text x="307" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">ESP32</text>
+            <text x="102" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">ESP32</text>
           </g>
           <g>
-            <rect x="360" y="552" width="85" height="34" rx="17" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.25)" stroke-width="1">
+            <rect x="165" y="492" width="85" height="34" rx="17" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.25)" stroke-width="1">
               <animate attributeName="width" values="85;90;85" dur="2.5s" repeatCount="indefinite"/>
             </rect>
-            <text x="402" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">Bash</text>
+            <text x="207" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">Bash</text>
           </g>
           <g>
-            <rect x="455" y="552" width="65" height="34" rx="17" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.25)" stroke-width="1">
+            <rect x="270" y="492" width="65" height="34" rx="17" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.25)" stroke-width="1">
               <animate attributeName="width" values="65;70;65" dur="2.0s" repeatCount="indefinite"/>
             </rect>
-            <text x="487" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Git</text>
+            <text x="302" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Git</text>
+          </g>
+          <g>
+            <rect x="355" y="492" width="110" height="34" rx="17" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.25)" stroke-width="1">
+              <animate attributeName="width" values="110;115;110" dur="2.0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="410" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">STM32</text>
+          </g>
+          <g>
+            <rect x="485" y="492" width="95" height="34" rx="17" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1">
+              <animate attributeName="width" values="95;100;95" dur="2.0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="532" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">Linux</text>
+          </g>
+          <g>
+            <rect x="600" y="492" width="100" height="34" rx="17" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.25)" stroke-width="1">
+              <animate attributeName="width" values="100;105;100" dur="2.0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="650" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">OpenWrt</text>
+          </g>
+          <g>
+            <rect x="720" y="492" width="90" height="34" rx="17" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.25)" stroke-width="1">
+              <animate attributeName="width" values="90;95;90" dur="2.0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="765" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Python</text>
+          </g>
+          <g>
+            <rect x="830" y="492" width="95" height="34" rx="17" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.25)" stroke-width="1">
+              <animate attributeName="width" values="95;100;95" dur="2.0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="877" y="514" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">Yocto</text>
           </g>
         </g>
       </g>
