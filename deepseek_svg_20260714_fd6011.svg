@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610" style="border-radius:24px;background:#030712;font-family:'SF Pro Display','Segoe UI',system-ui,sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="20%" cy="30%" r="50%">
+      <animate attributeName="cx" values="20%;30%;20%" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="30%;20%;30%" dur="8s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="70%" r="50%">
+      <animate attributeName="cx" values="80%;70%;80%" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="70%;60%;70%" dur="10s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="90%" r="40%">
+      <animate attributeName="cx" values="50%;60%;50%" dur="12s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="borderShimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)">
+        <animate attributeName="offset" values="0;1" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.08)">
+        <animate attributeName="offset" values="0.5;1.5" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)">
+        <animate attributeName="offset" values="1;2" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.03)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.06)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.04 0"/>
+    </filter>
+    <filter id="scanline">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.02" numOctaves="1" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" in="noise" result="colored"/>
+      <feBlend in="SourceGraphic" in2="colored" mode="overlay"/>
+    </filter>
+
+    <!-- Clip paths -->
+    <clipPath id="cardClip">
+      <rect width="1180" height="610" rx="24"/>
+    </clipPath>
+
+    <!-- Patterns -->
+    <pattern id="noisePattern" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" filter="url(#noise)" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <g clip-path="url(#cardClip)">
+    <rect width="1180" height="610" fill="#030712"/>
+    <rect width="1180" height="610" fill="url(#glow1)"/>
+    <rect width="1180" height="610" fill="url(#glow2)"/>
+    <rect width="1180" height="610" fill="url(#glow3)"/>
+    <rect width="1180" height="610" fill="url(#noisePattern)"/>
+
+    <!-- Particles -->
+    <g>
+      <circle cx="100" cy="80" r="1.5" fill="#7C3AED" opacity="0.4">
+        <animate attributeName="cy" values="80;60;80" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="250" cy="150" r="1" fill="#22D3EE" opacity="0.3">
+        <animate attributeName="cy" values="150;130;150" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="180" cy="400" r="1.2" fill="#10B981" opacity="0.3">
+        <animate attributeName="cy" values="400;380;400" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="500" r="0.8" fill="#7C3AED" opacity="0.2">
+        <animate attributeName="cy" values="500;480;500" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.5;0.2" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="350" cy="300" r="1" fill="#22D3EE" opacity="0.25">
+        <animate attributeName="cy" values="300;285;300" dur="5.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="80" cy="200" r="0.7" fill="#10B981" opacity="0.2">
+        <animate attributeName="cy" values="200;185;200" dur="6.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Scanline overlay -->
+    <rect width="1180" height="610" fill="url(#scanline)" opacity="0.15"/>
+
+    <!-- RIGHT SECTION - Full Width Terminal Content -->
+    <g>
+      <!-- Glass panel - full width -->
+      <rect x="30" y="30" width="1120" height="550" rx="18" fill="url(#glassGrad)" stroke="url(#glassBorder)" stroke-width="1"/>
+
+      <!-- Terminal header dots -->
+      <g opacity="0.4">
+        <circle cx="60" cy="55" r="6" fill="#EF4444"/>
+        <circle cx="82" cy="55" r="6" fill="#F59E0B"/>
+        <circle cx="104" cy="55" r="6" fill="#10B981"/>
+      </g>
+
+      <!-- Greeting -->
+      <text x="60" y="120" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="42" font-weight="700" fill="#F8FAFC" letter-spacing="-0.5">
+        Hi, I'm
+        <tspan fill="url(#accentGrad)"> Mazen</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.6s" fill="freeze"/>
+      </text>
+
+      <!-- Typing role text -->
+      <g>
+        <text x="60" y="185" font-family="'SF Mono','Menlo',monospace" font-size="20" fill="#94A3B8" letter-spacing="0.5">
+          <tspan>▸</tspan>
+          <tspan fill="url(#accentGrad)"> </tspan>
+        </text>
+        <!-- Animated typing: Embedded Systems Engineer -->
+        <text x="82" y="185" font-family="'SF Mono','Menlo',monospace" font-size="20" fill="#22D3EE" letter-spacing="0.5">
+          Embedded Systems Engineer
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.8s" fill="freeze"/>
+          <animate attributeName="opacity" values="1;0" dur="0.3s" begin="4s" fill="freeze"/>
+        </text>
+        <!-- Animated typing: Linux & OpenWrt Developer -->
+        <text x="82" y="185" font-family="'SF Mono','Menlo',monospace" font-size="20" fill="#22D3EE" letter-spacing="0.5" opacity="0">
+          Linux &amp; OpenWrt Developer
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="4.3s" fill="freeze"/>
+          <animate attributeName="opacity" values="1;0" dur="0.3s" begin="8s" fill="freeze"/>
+        </text>
+        <!-- Animated typing: Firmware & BSP Engineer -->
+        <text x="82" y="185" font-family="'SF Mono','Menlo',monospace" font-size="20" fill="#22D3EE" letter-spacing="0.5" opacity="0">
+          Firmware &amp; BSP Engineer
+          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="8.3s" fill="freeze"/>
+          <animate attributeName="opacity" values="1;0" dur="0.3s" begin="12.5s" fill="freeze"/>
+        </text>
+        <!-- Cursor -->
+        <rect x="330" y="168" width="2" height="24" fill="#22D3EE" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0;0.8" dur="0.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Info items - sequential reveal -->
+      <g font-family="'SF Pro Display','Segoe UI',system-ui" font-size="17" fill="#94A3B8">
+        <!-- Location -->
+        <text x="60" y="265" opacity="0">
+          <tspan fill="#94A3B8">📍 </tspan>Tunis, Tunisia
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
+        </text>
+        <!-- Education -->
+        <text x="60" y="305" opacity="0">
+          <tspan fill="#94A3B8">🎓 </tspan>Embedded Systems Eng. @ ESPRIT
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.5s" fill="freeze"/>
+        </text>
+        <!-- Current Focus -->
+        <text x="60" y="345" opacity="0">
+          <tspan fill="#94A3B8">⚡ </tspan>prplOS/OpenWrt · Broadband Software
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.5s" fill="freeze"/>
+        </text>
+        <!-- Portfolio -->
+        <text x="60" y="385" opacity="0">
+          <tspan fill="#94A3B8">🖥️ </tspan>mazen-touaiti.lovable.app
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.5s" fill="freeze"/>
+        </text>
+        <!-- Email -->
+        <text x="60" y="425" opacity="0">
+          <tspan fill="#94A3B8">✉️ </tspan>touaitimazen@gmail.com
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.5s" fill="freeze"/>
+        </text>
+      </g>
+
+      <!-- Skills section -->
+      <g>
+        <text x="60" y="485" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#64748B" letter-spacing="2" text-transform="uppercase" opacity="0">
+          ⚡ Core Skills
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="6.5s" fill="freeze"/>
+        </text>
+
+        <!-- Skill pills -->
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.5s" begin="7s" fill="freeze"/>
+
+          <!-- Row 1 -->
+          <g>
+            <rect x="60" y="510" width="110" height="34" rx="17" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.3)" stroke-width="1">
+              <animate attributeName="width" values="110;115;110" dur="2s" repeatCount="indefinite"/>
+            </rect>
+            <text x="115" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Embedded C</text>
+          </g>
+          <g>
+            <rect x="180" y="510" width="100" height="34" rx="17" fill="rgba(34,211,238,0.15)" stroke="rgba(34,211,238,0.3)" stroke-width="1">
+              <animate attributeName="width" values="100;105;100" dur="2.2s" repeatCount="indefinite"/>
+            </rect>
+            <text x="230" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">STM32</text>
+          </g>
+          <g>
+            <rect x="290" y="510" width="95" height="34" rx="17" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.3)" stroke-width="1">
+              <animate attributeName="width" values="95;100;95" dur="1.8s" repeatCount="indefinite"/>
+            </rect>
+            <text x="337" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">Linux</text>
+          </g>
+          <g>
+            <rect x="395" y="510" width="100" height="34" rx="17" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.3)" stroke-width="1">
+              <animate attributeName="width" values="100;105;100" dur="2.4s" repeatCount="indefinite"/>
+            </rect>
+            <text x="445" y="532" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">OpenWrt</text>
+          </g>
+
+          <!-- Row 2 -->
+          <g>
+            <rect x="60" y="552" width="90" height="34" rx="17" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.25)" stroke-width="1">
+              <animate attributeName="width" values="90;95;90" dur="2.1s" repeatCount="indefinite"/>
+            </rect>
+            <text x="105" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Python</text>
+          </g>
+          <g>
+            <rect x="160" y="552" width="95" height="34" rx="17" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.25)" stroke-width="1">
+              <animate attributeName="width" values="95;100;95" dur="1.9s" repeatCount="indefinite"/>
+            </rect>
+            <text x="207" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#67E8F9" text-anchor="middle" font-weight="500">Yocto</text>
+          </g>
+          <g>
+            <rect x="265" y="552" width="85" height="34" rx="17" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1">
+              <animate attributeName="width" values="85;90;85" dur="2.3s" repeatCount="indefinite"/>
+            </rect>
+            <text x="307" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#6EE7B7" text-anchor="middle" font-weight="500">ESP32</text>
+          </g>
+          <g>
+            <rect x="360" y="552" width="85" height="34" rx="17" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.25)" stroke-width="1">
+              <animate attributeName="width" values="85;90;85" dur="2.5s" repeatCount="indefinite"/>
+            </rect>
+            <text x="402" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#7DD3FC" text-anchor="middle" font-weight="500">Bash</text>
+          </g>
+          <g>
+            <rect x="455" y="552" width="65" height="34" rx="17" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.25)" stroke-width="1">
+              <animate attributeName="width" values="65;70;65" dur="2.0s" repeatCount="indefinite"/>
+            </rect>
+            <text x="487" y="574" font-family="'SF Pro Display','Segoe UI',system-ui" font-size="13" fill="#A78BFA" text-anchor="middle" font-weight="500">Git</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Border shimmer overlay -->
+    <rect width="1180" height="610" rx="24" fill="none" stroke="url(#borderShimmer)" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- Glass reflection -->
+    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.02)">
+        <animate attributeName="offset" values="0;0.5;0" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)">
+        <animate attributeName="offset" values="0.5;1;0.5" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <rect width="1180" height="610" rx="24" fill="url(#glassReflect)" opacity="0.3"/>
+  </g>
+</svg>
