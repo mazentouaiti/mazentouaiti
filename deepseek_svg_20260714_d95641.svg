@@ -127,8 +127,7 @@
 
     <!-- Scanline overlay -->
     <rect width="1180" height="610" fill="url(#scanline)" opacity="0.15"/>
-
-   <!-- LEFT SECTION (38%) - Floating Profile Image -->
+    <!-- LEFT SECTION (38%) - Floating Profile Image -->
 <g>
   <!-- Glass panel background -->
   <rect x="30" y="30" width="420" height="550" rx="18" fill="url(#glassGrad)" stroke="url(#glassBorder)" stroke-width="1"/>
@@ -163,8 +162,8 @@
       <animate attributeName="opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Profile Image (rounded) -->
-    <image href="https://github.com/mazentouaiti/mazentouaiti/blob/main/mazen.jpeg" x="150" y="170" width="180" height="180" rx="90" clip-path="inset(0 round 90)"/>
+    <!-- Profile Image (rounded) - FIXED URL -->
+    <image href="https://raw.githubusercontent.com/mazentouaiti/mazentouaiti/main/mazen.jpeg" x="150" y="170" width="180" height="180" rx="90" clip-path="inset(0 round 90)"/>
 
     <!-- Image border glow -->
     <circle cx="240" cy="260" r="90" fill="none" stroke="rgba(124,58,237,0.4)" stroke-width="2">
@@ -196,6 +195,7 @@
     </circle>
   </g>
 </g>
+    
     
 
     <!-- Divider -->
